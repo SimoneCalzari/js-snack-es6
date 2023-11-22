@@ -1,13 +1,5 @@
 'use strict';
 
-/*
-
-- Creare un array di oggetti.
-- Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
-- Stampare a schermo la bici con peso minore utilizzando destructuring e template literal.
-
-*/
-
 // ARRAY BIKES
 
 const bikes = [
@@ -34,7 +26,6 @@ const bikes = [
 ];
 
 //*********** SOLUZIONI CHE NON VEDONO IL CASO DI PAREGGIO INIZIO
-
 
 // // VARIABILI PER SALVARMI MENTRE CICLO IL PESO MINORE PARZIALE E LA CORRISPONDENTE BICI
 // let biciLeggera = bikes[0].nome;
