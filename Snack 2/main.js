@@ -46,18 +46,29 @@ teams.forEach((team) => {
 // GENERIAMO NUOVO ARRAY CON OGGETTI CHE HANNO SOLO NOMI E FALLI SUBITI
 
 const newArray = [];
+// teams.forEach((team) => {
+//   const {nome, ['falli subiti'] : falliSubiti} = team;
+//   const newTeam = {
+
+//     nome: nome,
+//     'falli subiti': falliSubiti
+
+//   };
+//   newArray.push(newTeam);
+//   // SE VOLESSI ARRAY I CUI ELEMENTI SONO I VALORI DELLE KEY NOME E FALLI SUBITI, E NON OGGETTI CHE LI CONTENGANO
+//   //newArray.push(nome); 
+//   //newArray.push(falliSubiti);
+// });
+
+// METODO ALTERNATIVO SENZA DECOSTRUZIONE E COL CICLO LET IN SUI SINGOLI TEAM
 teams.forEach((team) => {
-  const {nome, ['falli subiti'] : falliSubiti} = team;
-  const newTeam = {
-
-    nome: nome,
-    'falli subiti': falliSubiti
-
-  };
+  const newTeam = {};
+  for (let key in team) {
+    if (key !== 'punti fatti') {
+      newTeam[key] = team[key];
+    }
+  }
   newArray.push(newTeam);
-  // SE VOLESSI ARRAY I CUI ELEMENTI SONO I VALORI DELLE KEY NOME E FALLI SUBITI, E NON OGGETTI CHE LI CONTENGANO
-  //newArray.push(nome); 
-  //newArray.push(falliSubiti);
 });
 
 console.log(newArray);
